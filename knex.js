@@ -5,50 +5,50 @@
  */
 module.exports = {
 
-    development: {
-      client: 'pg',
-      connection: {
-        host: 'localhost',
-        port: '5432',
-        database: 'postgres',
-        user:     'postgres',
-        password: 'Marado86'
-      },
-      useNullAsDefault:true,
+  development: {
+    client: 'pg',
+    connection: {
+      host: 'localhost',
+      port: '5432',
+      database: 'postgres',
+      user:     'postgres',
+      password: 'Marado86'
     },
-  
-    staging: {
-      client: 'postgresql',
-      connection: {
-        database: 'postgres',
-        user:     'postgres',
-        password: 'Marado86'
-      },
-      pool: {
-        min: 2,
-        max: 10
-      },
-      migrations: {
-        tableName: 'knex_migrations'
-      }
+    useNullAsDefault:true,
+  },
+
+  staging: {
+    client: 'postgresql',
+    connection: {
+      database: 'my_db',
+      user:     'username',
+      password: 'password'
     },
-  
-    production: {
-      client: 'pg',
-      connection: {
-        host: 'localhost',
-        port: '5432',
-        database: 'postgres',
-        user:     'postgres',
-        password: 'Marado86'
-      },
-      pool: {
-        min: 2,
-        max: 10
-      },
-      migrations: {
-        tableName: 'knex_migrations'
-      }
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      tableName: 'knex_migrations'
     }
-  
-  };
+  },
+
+  production: {
+    client: 'pg',
+    connection: {
+      host: 'localhost',
+      port: '5432',
+      database: 'postgres',
+      user:     'postgres',
+      password: 'Marado86'
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      tableName: 'knex_migrations'
+    }
+  }
+
+};
