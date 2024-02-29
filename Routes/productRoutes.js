@@ -1,2 +1,11 @@
-const productRoutes = require('./routes/productRoutes');
-app.use('/api/v1/products', productRoutes);
+// routes/userRoutes.js
+const express = require('express');
+const userController = require('../Controllers/productController');
+
+const router = express.Router();
+
+router.post('/product', userController.createUser);
+
+
+
+module.exports = router;

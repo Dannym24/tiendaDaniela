@@ -1,2 +1,11 @@
-const userRoutes = require('./routes/userRoutes');
-app.use('/api/v1/users', userRoutes);
+// routes/userRoutes.js
+const express = require('express');
+const userController = require('../Controllers');
+
+const router = express.Router();
+
+router.post('/user', userController.createUser);
+
+
+
+module.exports = router;
